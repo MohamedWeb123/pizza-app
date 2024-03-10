@@ -138,7 +138,7 @@ header .navigation.active .navigation-items{
 
 .menu-btn{
     
-    background: url(image/menu.png)no-repeat;
+    background: url(/image/menu.png)no-repeat;
     background-size: 30px;
     background-position: center;
     width: 40px;
@@ -149,7 +149,7 @@ header .navigation.active .navigation-items{
 
 .menu-btn.active{
     z-index: 999;
-    background: url(image/close.png)no-repeat;
+    background: url(/image/close.png)no-repeat;
     background-size: 25px;
     background-position: center;
     transition: 0.3s ease;
@@ -160,11 +160,15 @@ header .navigation.active .navigation-items{
 
 
 
+html {
+    font-size: 62.5%; /* 1rem = 10px, so 62.5% of 10px = 6.25px */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
 
 
-
-body,html{
+body{
 margin: 0;
 padding: 0;
 

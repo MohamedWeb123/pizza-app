@@ -1,90 +1,136 @@
-/* Google Font */
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800);
-
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+*{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
-
 html {
+    font-size: 62.5%; /* 1rem = 10px, so 62.5% of 10px = 6.25px */
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
-:root {
-    --orange: #f7f91f;
-    --text-color-1-: #444;
-    --text-color-2-: #666;
-    --bg-color-1: #fff;
-    --bg-color-2: #ffc966;
-    --box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+.section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
 }
 
-body {
-    background: var(--bg-color-2);
+.content-section{
+    float: left;
+    width: 55%;
 }
 
-.homes#homes {
-    background-color: #ffc966; /* Light background color for the "Most Tasty Pizza For You" section */
+.image-section{
+    float: right;
+    width: 40%;
 }
 
-.homes#About1 {
-    background-color: #fcd58d; /* Light background color for the "About Our Pizza" section */
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
 }
 
-.homes#Remind {
-    background-color: #f8e2b8; /* Light background color for the "Remind Me Later" section */
+.content-section .content h3{
+    margin-top: 20px;
+    color: darkorange;
+    font-size: 21px;
 }
 
-
-section {
-    padding: 2rem 7%;
+.content-section .content p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.content-section .content .button{
+    margin-top: 30px;
 }
 
-.homes {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 7rem;
-    
-}
-
-.homes .content {
-    flex: 1 1 45rem;
-}
-
-.homes .content h3 {
-    color: var(--text-color-1-);
-    font-size: 4rem;
-}
-
-.homes .content p {
-    color: var(--text-color-2-);
-    font-size: 1.7rem;
-    line-height: 1.7;
-    padding: 1rem;
-}
-
-.btn {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 0.8rem 3rem;
-    font-size: 1.7rem;
+.content-section .content .button a{
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    text-decoration: none;
     color: #fff;
-    background: #ab6806;
-    border-radius: 0.5rem;
-    cursor: pointer;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+
 }
 
-.btn:hover {
-    transform: scale(1.15);
+.content-section .content .button a:hover{
+    background-color: darkorange;
+    color: #fff;
 }
+
+.content-section .social{
+    margin-top: 40px;
+    margin-left: -15px;
+}
+
+.content-section .social i{
+    color: darkorange;
+    font-size: 30px;
+    padding: 0px 10px;
+
+}
+
+.content-section .social i:hover{
+    color: rgb(255, 233, 206);
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 150px;
+    }
+    .content-section{
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.image-section{
+    float: none;
+    width: 100%;
+   
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.content-section .title{
+    text-align: center;
+    font-size: 19px;
+
+}
+.content-section .content .button{
+    text-align: center;
+
+}
+.content-section .content .button a{
+    padding: 9px 30px;
+}
+.content-section .social{
+    text-align: center;
+}
+
+}
+
+
 
 /* Responsive navigation */
 header {
@@ -114,17 +160,16 @@ main {
     padding-top: 80px; /* Adjust as needed based on your header height */
 }
 
-.scroll-indicator-container{
+.scroll-indicator-container {
     width: 100%;
     height: 5px;
 }
 
-.scroll-indicator-bar{
+.scroll-indicator-bar {
     background: #f7a902;
     width: 0%;
     height: 100%;
 }
-
 
 /* Existing styles */
 /* Add new styles for scroll indicator */
@@ -187,8 +232,6 @@ header .navigation .navigation-items a:hover:before {
     width: 100%;
 }
 
-
-
 /* Scrollbar customization */
 ::-webkit-scrollbar {
     background: #fff;
@@ -205,6 +248,7 @@ header .navigation .navigation-items a:hover:before {
 ::-webkit-scrollbar-thumb:hover {
     background: #f7c55b;
 }
+
 .scroll-down {
     position: fixed;
     left: 20px;
@@ -214,26 +258,20 @@ header .navigation .navigation-items a:hover:before {
     font-size: 25px;
 }
 
-
-@media (max-width: 1040px){
+@media (max-width: 1040px) {
     header {
-        
         padding: 12px 20px;
-        
     }
-    section{
-    padding: 100px 20px;    
+    section {
+        padding: 100px 20px;    
     }
     .home .media-icons {
-       
         right: 15px;
     }
     header .navigation {
-        
         display: none;
     }
-    header .navigation.active{
-        
+    header .navigation.active {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -245,21 +283,18 @@ header .navigation .navigation-items a:hover:before {
         background: rgba(1, 1, 1, 0.5);
     }
     
-    
     header .navigation .navigation-items a {
-        
         color: #222;
         font-size: 1.2em;
         margin: 20px;
-        
     }
     
-    header .navigation .navigation-items a:before{
+    header .navigation .navigation-items a:before {
         background: darkorange;
         height: 5px;
     }
     
-    header .navigation.active .navigation-items{
+    header .navigation.active .navigation-items {
         background: #fff;
         width: 600px;
         max-width: 600px;
@@ -272,9 +307,8 @@ header .navigation .navigation-items a:hover:before {
         box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
     }
     
-    .menu-btn{
-        
-        background: url(image/menu.png)no-repeat;
+    .menu-btn {
+        background: url(/image/menu.png)no-repeat;
         background-size: 30px;
         background-position: center;
         width: 40px;
@@ -283,22 +317,12 @@ header .navigation .navigation-items a:hover:before {
         transition: 0.3s ease;
     }
     
-    .menu-btn.active{
+    .menu-btn.active {
         z-index: 999;
-        background: url(image/close.png)no-repeat;
+        background: url(/image/close.png)no-repeat;
         background-size: 25px;
         background-position: center;
         transition: 0.3s ease;
     }
-    }
-
-@media (max-height: 800px) {
-    header {
-        padding: 40px;
-    }
 }
 
-.fade-in-image {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}

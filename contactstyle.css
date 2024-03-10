@@ -2,20 +2,18 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800);
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    background: rgb(253, 251, 247);
-    background-size: cover;
-    display: flex;
-    flex-direction: column; /* Make the body a flex container */
-}
 
+html {
+    font-size: 62.5%; /* 1rem = 10px, so 62.5% of 10px = 6.25px */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 /* Header */
 header {
     z-index: 999;
@@ -24,9 +22,9 @@ header {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px 200px;
     transition: 0.5s ease;
     position: relative;
     background: rgba(255, 255, 255, 0.1);
@@ -185,7 +183,7 @@ header .navigation .navigation-items a:hover:before {
     background: rgb(255, 255, 119);
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 768px) {
     .contact-section {
         flex-direction: column;
     }
@@ -426,7 +424,7 @@ header .navigation .navigation-items a:hover:before {
     
     .menu-btn{
         
-        background: url(image/menu.png)no-repeat;
+        background: url(/image/menu.png)no-repeat;
         background-size: 30px;
         background-position: center;
         width: 40px;
@@ -437,7 +435,7 @@ header .navigation .navigation-items a:hover:before {
     
     .menu-btn.active{
         z-index: 999;
-        background: url(image/close.png)no-repeat;
+        background: url(/image/close.png)no-repeat;
         background-size: 25px;
         background-position: center;
         transition: 0.3s ease;

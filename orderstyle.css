@@ -15,13 +15,15 @@
 }
 
 html{
+    
+    font-size: 62.5%; /* 1rem = 10px, so 62.5% of 10px = 6.25px */
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 
 :root {
-    --orange: #f7f91f;
+    --orange: #f79f1f;
     --text-color-1-: #444;
     --text-color-2-: #666;
     --bg-color-1: #fff;
@@ -35,6 +37,29 @@ body {
    
     background: var(--bg-color-2);
   
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--text-color-1-);
+    font-size: 4rem;
+}
+
+.heading span{
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: var(--orange);
+    height: 100%;   
+    width: 100%;
+    clip-path: polygon(0 90%, 100% 83%, 100% 100%, 0% 100%);
 }
 
 section{
@@ -147,6 +172,76 @@ section{
 }
 
 
+
+/*=========================================Food Offers=======================================*/
+
+.packages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.packages .box-container .box{
+    background: var(--bg-color-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.packages .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding:1.5rem;
+    position: relative;
+
+}
+.packages .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+
+}
+
+.packages .box .image h3{
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    font-weight: lighter;
+    padding: 0.5rem 1.5rem;
+}
+
+.packages .box .image h3 i{
+    color: var(--orange);
+}
+
+.packages .box-container .box .price{
+    font-weight:600 ;
+    color: var(--text-color-1-);
+    font-size: 2.5rem;
+}
+
+.packages .box-container .content{
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+.packages .box-container .box .price span{
+    font-weight: lighter;
+    color: var(--text-color-2-);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.packages .box-container .box .content p{
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: var(--text-color-2-);
+    line-height: 1.7rem;
+}
 
 
 /*================================ Responsive navigation========================== */
@@ -337,7 +432,7 @@ header .navigation .navigation-items a:hover:before {
     
     .menu-btn{
         
-        background: url(image/menu.png)no-repeat;
+        background: url(/image/menu.png)no-repeat;
         background-size: 30px;
         background-position: center;
         width: 40px;
@@ -348,7 +443,7 @@ header .navigation .navigation-items a:hover:before {
     
     .menu-btn.active{
         z-index: 999;
-        background: url(image/close.png)no-repeat;
+        background: url(/image/close.png)no-repeat;
         background-size: 25px;
         background-position: center;
         transition: 0.3s ease;
