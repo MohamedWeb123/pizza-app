@@ -298,3 +298,7 @@ header .navigation .navigation-items a:hover:before {
     }
 }
 
+.fade-in-image {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}

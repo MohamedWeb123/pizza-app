@@ -6,3 +6,26 @@ const typed = new Typed('#text', {
 });
 
 
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+// Fade in image
+window.addEventListener('scroll', () => {
+  const fadeInImages = document.querySelectorAll('.fade-in-image');
+  fadeInImages.forEach(image => {
+      const bounding = image.getBoundingClientRect();
+      if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+          image.classList.add('show');
+      } else {
+          image.classList.remove('show');
+      }
+  });
+});

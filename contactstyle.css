@@ -10,7 +10,7 @@
 
 body {
     min-height: 100vh;
-    background: rgb(248, 169, 72);
+    background: rgb(253, 251, 247);
     background-size: cover;
     display: flex;
     flex-direction: column; /* Make the body a flex container */
@@ -115,7 +115,7 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .contact-info {
-    color: #fff;
+    color: #000000;
     max-width: 500px;
     line-height: 65px;
     padding-left: 50px;
@@ -133,7 +133,7 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .contact-form h2 {
-    color: #fff;
+    color: #000000;
     text-align: center;
     font-size: 35px;
     text-transform: uppercase;
