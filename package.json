@@ -1,0 +1,30 @@
+{
+  "name": "d1-shop",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "daisyui": "^4.7.2",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.17",
+    "daisyui": "^4.7.2",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.4",
+    "typed.js": "^2.1.0",
+    "aos": "^2.3.4",
+    "gsap": "^3.12.5",
+    "particles.js": "^2.0.0",
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
+  }
+}

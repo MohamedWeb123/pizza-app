@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Include ScrollReveal script from the first code -->
+    <script>
+        // JavaScript from the first code
+        // Add here the JavaScript code for the navigation menu and any other script you need from the first code
+    </script>
+</head>
+<body>
+
+    <!-- Header Section with Navigation -->
+    
+    <header>
+        <a href="index.html" class="brand"><i class='bx bx-home'></i> Pizzeria</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Menu.html">Menu</a>
+                <a href="Order.html"><i class='fas fa-shopping-cart' style='font-size:24px'></i> Order</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Log In</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </header>
+    <!-- End Header Section -->
+    
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="contact-info">
+            <div><i class="fa-solid fa-location-dot"></i>Address, City, Country</div>
+            <div><i class="fa-solid fa-envelope"></i>Contact@Gmail.com</div>
+            <div><i class="fa-solid fa-phone"></i>+00 00 00000 000</div>
+            <div><i class="fa-solid fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form class="contact" action="" method="post">
+                <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" name="submit" class="send-btn" value="Send">
+            </form>
+        </div>
+    </div>
+    <!-- End Contact Section -->
+
+    <script type="text/javascript">
+        // JavaScript for scroll indicator
+        window.onscroll = function() {scrollIndicator()};
+    
+        function scrollIndicator() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.querySelector('.scroll-indicator').style.width = scrolled + "%";
+        }
+    </script>
+    <script>
+        // JavaScript for scroll text visibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollText = document.querySelector('.scroll-text');
+            
+            // Function to toggle visibility of scroll text
+            function toggleScrollText() {
+                if (window.scrollY > 0) {
+                    scrollText.style.display = 'none'; // Hide scroll text when scrolling down
+                } else {
+                    scrollText.style.display = 'block'; // Show scroll text when at the top
+                }
+            }
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', toggleScrollText);
+        });
+
+        // JavaScript for responsive navigation menu
+const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+});
+
+    </script>
+    <!-- Add any additional JavaScript from the second code as needed -->
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Pizza Website</title>
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="aboutstyle.css">
+</head>
+<body>
+
+
+    <header class="stick">
+        <a href="index.html" class="brand"><i class='bx bx-home'></i> Pizzeria</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Menu.html">Menu</a>
+                <a href="Order.html"><i class='fas fa-shopping-cart' style='font-size:24px'></i> Order</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Log In</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </header>
+    
+    
+        <div class="scroll-indicator-container">
+        <div class="scroll-indicator-bar"></div>
+        </div>
+
+
+<!-- First Section: Home -->
+<section class="homes" id="homes">
+    <div class="content">
+        <h3>Most Tasty Pizza For You</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus maiores quidem velit minima molestiae vel in, quibusdam tempora! Id reprehenderit, excepturi cupiditate architecto deleniti repellat iure numquam eligendi atque minus!</p>
+        <!--button-->
+        <a href="#About1" class="btn">Explore Now</a>
+    </div>
+</section>
+
+<!-- Second Section: About -->
+<section class="homes" id="About1">
+    <div class="content">
+        <h3>About Our Pizza</h3>
+        <p>Here you can add more information about your pizza, its ingredients, how it's made, etc.</p>
+        <!-- Add more content or images here -->
+        <a href="#Remind" class="btn">Remind More</a>
+    </div>
+</section>
+
+<!-- Third Section: Remind -->
+<section class="homes" id="Remind">
+    <div class="content">
+        <h3>Remind Me Later</h3>
+        <p>Here you can place some more information or a form for users to input their email addresses to receive reminders or newsletters.</p>
+        <a href="contact2.html" class="btn">Contact Us</a>
+        <!-- Add your form or additional content here -->
+    </div>
+</section>
+
+
+<!-- Your JavaScript file -->
+<script type="text/javascript">
+    window.onscroll = function() {scrollIndicator()};
+
+    function scrollIndicator() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.querySelector('.scroll-indicator').style.width = scrolled + "%";
+    }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollText = document.querySelector('.scroll-text');
+      
+      // Function to toggle visibility of scroll text
+      function toggleScrollText() {
+        if (window.scrollY > 0) {
+          scrollText.style.display = 'none'; // Hide scroll text when scrolling down
+        } else {
+          scrollText.style.display = 'block'; // Show scroll text when at the top
+        }
+      }
+      
+      // Listen for scroll events
+      window.addEventListener('scroll', toggleScrollText);
+    });
+  </script>
+
+
+<script type="text/javascript">
+    //javascript of responsive navigation menu
+
+    const menuBtn=document.querySelector(".menu-btn");
+    const navigation=document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click",()=>{
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+</script>
+<script src="book.js"></script>
+</body>
+</html>
+
+
+
+
+/* Header */
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 20px;
+    transition: 0.5s ease;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.stick {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Navigation */
+header .brand {
+    color: darkorange;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.brand:hover {
+    transform: scale(1.3);
+}
+
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+}
+
+header .navigation .navigation-items {
+    margin-left: auto;
+}
+
+header .navigation .navigation-items a {
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 30px; /* Adjust spacing as needed */
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: darkorange;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #ab6806;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.15);
+}
+
+/* Responsive navigation */
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.stick {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    padding-top: 80px; /* Adjust as needed based on your header height */
+}
+
+.scroll-indicator-container{
+    width: 100%;
+    height: 5px;
+}
+
+.scroll-indicator-bar{
+    background: #f7a902;
+    width: 0%;
+    height: 100%;
+}
+
+
+/* Existing styles */
+/* Add new styles for scroll indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px; /* Height of the scroll indicator */
+    background-color: darkorange; /* Color of the scroll indicator */
+    z-index: 9999; /* Ensure the scroll indicator is above other content */
+}
+
+/* Title for the Pizzeria on the top left side */
+header .brand {
+    color: darkorange;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+/* Hovering effect for the title */
+.brand:hover {
+    transform: scale(1.3);
+}
+
+/* Positioning of the navbar title; menu home order etc */
+header .navigation {
+    position: relative;
+}
+
+/* The decoration of the titles items */
+header .navigation .navigation-items a {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+/* Hovering effect */
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: darkorange;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    background: #fff;
+    width: 11px;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f7a902;
+    width: 100%;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f7c55b;
+}
+.scroll-down {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 999;
+    color: darkorange; /* Change the color to orange */
+    font-size: 25px;
+}
+
+
+@media (max-width: 1040px){
+    header {
+        
+        padding: 12px 20px;
+        
+    }
+    
+    .home .media-icons {
+       
+        right: 15px;
+    }
+    header .navigation {
+        
+        display: none;
+    }
+    header .navigation.active{
+        
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+    
+    
+    header .navigation .navigation-items a {
+        
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+        
+    }
+    
+    header .navigation .navigation-items a:before{
+        background: darkorange;
+        height: 5px;
+    }
+    
+    header .navigation.active .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+    
+    .menu-btn{
+        
+        background: url(image/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    .menu-btn.active{
+        z-index: 999;
+        background: url(image/close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+    }
+
+@media (max-height: 800px) {
+    header {
+        padding: 40px;
+    }
+}
+
+
+
+
+
+
+
